@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/reset.css" />
+    <link rel="stylesheet" href="/src/css/variables.css" />
+    <link rel="stylesheet" href="/src/css/styles.css" />
+    <title>Star Wars API - Assignment_1</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <h1 class="navbar__header">Star Wars API</h1>
+        <ul class="navbar__list">
+          <li class="navbar__list-element">
+            <button class="list-element__button list-element__button--active">
+              Movies
+            </button>
+          </li>
+          <li class="navbar__list-element">
+            <button class="list-element__button">Characters</button>
+          </li>
+          <li class="navbar__list-element">
+            <button class="list-element__button">Planets</button>
+          </li>
+          <li class="navbar__list-element">
+            <button class="list-element__button">Vehicles</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="card-container"></div>
+    </main>
+  </body>
 </html>
