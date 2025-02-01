@@ -1,11 +1,14 @@
-import fetchData from "./fetchData";
+import fetchData from "./fetchData.js";
+import renderFilms from "./renderFilms.js";
 
-const moviesButton = document.querySelector(".list-element__button-movies");
+// Load default category on entering page
+document.addEventListener("DOMContentLoaded", fetchData("films"));
+
+// Button selector
+const filmsButton = document.querySelector(".list-element__button-films");
 const peopleButton = document.querySelector(".list-element__button-people");
 const planetsButton = document.querySelector(".list-element__button-planets");
 const vehiclesButton = document.querySelector(".list-element__button-vehicles");
-
-console.log(moviesButton);
 
 // Remove active class
 const removeClass = () => {
@@ -17,26 +20,26 @@ const removeClass = () => {
 };
 
 // Event Listeners
-moviesButton.addEventListener("click", () => {
+filmsButton.addEventListener("click", () => {
   removeClass();
-  // renderMovies("films");
-  moviesButton.classList.add("list-element__button--active");
+  fetchData("films");
+  filmsButton.classList.add("list-element__button--active");
 });
 
 peopleButton.addEventListener("click", () => {
   removeClass();
-  // renderPeople("people");
+  fetchData("people");
   peopleButton.classList.add("list-element__button--active");
 });
 
 planetsButton.addEventListener("click", () => {
   removeClass();
-  // renderButton("planets");
+  fetchData("planets");
   planetsButton.classList.add("list-element__button--active");
 });
 
 vehiclesButton.addEventListener("click", () => {
   removeClass();
-  // renderVehicles("vehicles");
+  fetchData("vehicles");
   vehiclesButton.classList.add("list-element__button--active");
 });
