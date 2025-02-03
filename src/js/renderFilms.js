@@ -1,13 +1,13 @@
 import fetchData from "./fetchData.js";
 
 const films = [
-  "../src/assets/images/films/stars-wars-a-new-hope.jpg",
-  "../src/assets/images/films/stars-wars-the-empire-strikes-back.jpg",
-  "../src/assets/images/films/stars-wars-return-of-the-jedi.jpg",
-  "../src/assets/images/films/stars-wars-the-phantom-menace.jpg",
-  "../src/assets/images/films/stars-wars-attack-of-the-clones.jpg",
-  "../src/assets/images/films/stars-wars-revenge-of-the-sith.jpg",
-  "../src/assets/images/films/stars-wars-the-force-awakens.jpg",
+  "../src/assets/images/films/star-wars-a-new-hope.jpg",
+  "../src/assets/images/films/star-wars-the-empire-strikes-back.jpg",
+  "../src/assets/images/films/star-wars-return-of-the-jedi.jpg",
+  "../src/assets/images/films/star-wars-the-phantom-menace.jpg",
+  "../src/assets/images/films/star-wars-attack-of-the-clones.jpg",
+  "../src/assets/images/films/star-wars-revenge-of-the-sith.jpg",
+  "../src/assets/images/films/star-wars-the-force-awakens.jpg",
 ];
 
 const renderFilms = (data) => {
