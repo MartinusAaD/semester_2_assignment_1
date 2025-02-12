@@ -60,7 +60,7 @@ const renderPlanets = (data) => {
     const planetsName = createListElement("Planet:", data.results[i].name);
     const planetsDiameter = createListElement(
       "Diameter:",
-      data.results[i].diameter
+      `${data.results[i].diameter} Kilometers`
     );
     const planetsTerrain = createListElement(
       "Terrain:",
@@ -76,7 +76,7 @@ const renderPlanets = (data) => {
     );
     const planetsOrbitalPeriod = createListElement(
       "Orbital Period:",
-      data.results[i].orbital_period
+      `${data.results[i].orbital_period}`
     );
 
     // Appending list elements

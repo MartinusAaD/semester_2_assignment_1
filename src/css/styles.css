@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Starjedi;
+  src: url("../assets/fonts/Starjedi.ttf");
+}
+
+body {
+  background-color: black;
+}
+
 main {
   min-width: 100%;
   min-height: 100vh;
@@ -8,12 +17,13 @@ main {
   display: flex;
   align-items: center;
   padding: var(--spacing-large);
-  background-color: var(--color-background-dark);
 }
 
 .navbar__header {
   flex-basis: 40%;
-  color: var(--color-text-light);
+  font-family: Starjedi;
+  letter-spacing: 2px;
+  color: var(--color-text-starwars);
 }
 
 .navbar__list {
@@ -24,25 +34,29 @@ main {
 }
 
 .navbar__list-element {
+
 }
 
 .list-element__button {
-  color: var(--color-text-light);
   padding: var(--spacing-small) var(--spacing-medium);
   font-weight: bold;
   background-color: transparent;
   border-bottom: 2px solid transparent;
+  font-family: Starjedi;
+  letter-spacing: 2px;
+  color: var(--color-text-starwars);
 }
 
 .list-element__button:hover {
-  border-bottom: 2px solid var(--color-text-light);
+  border-bottom: 2px solid var(--color-text-starwars);
+
 }
 
 .list-element__button:active {
 }
 
 .list-element__button--active {
-  border-bottom: 2px solid var(--color-text-light);
+  border-bottom: 2px solid var(--color-text-starwars);
 }
 
 .card-container {
@@ -58,10 +72,10 @@ main {
 
 .card {
   width: 250px;
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
   padding-bottom: var(--spacing-medium);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .card__image-container {

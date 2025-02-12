@@ -2,6 +2,7 @@ import renderFilms from "./renderFilms.js";
 import renderPeople from "./renderPeople.js";
 import renderPlanets from "./renderPlanets.js";
 import renderVehicles from "./renderVehicles.js";
+import renderError from "./renderError.js";
 
 const fetchData = async (category) => {
   try {
@@ -38,6 +39,7 @@ const fetchData = async (category) => {
     return data;
   } catch (error) {
     console.log("Could not fetch data", error);
+    renderError();
     return;
   }
 };
