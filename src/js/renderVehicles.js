@@ -1,16 +1,16 @@
 import fetchData from "./fetchData.js";
 
 const vehicles = [
-  "../src/assets/images/vehicles/star-wars-sandcrawler.jpeg",
-  "../src/assets/images/vehicles/star-wars-skyhopper.jpg",
-  "../src/assets/images/vehicles/star-wars-landspeeder.jpg",
-  "../src/assets/images/vehicles/star-wars-starfighter.jpg",
-  "../src/assets/images/vehicles/star-wars-snowspeeder.jpeg",
-  "../src/assets/images/vehicles/star-wars-tie-bomber.jpg",
-  "../src/assets/images/vehicles/star-wars-at-at.jpg",
-  "../src/assets/images/vehicles/star-wars-at-st.jpeg",
-  "../src/assets/images/vehicles/star-wars-storm-iv-twin-pod-cloud-car.jpg",
-  "../src/assets/images/vehicles/star-wars-sail-barge.jpg",
+  "/images/vehicles/star-wars-sandcrawler.jpeg",
+  "/images/vehicles/star-wars-skyhopper.jpg",
+  "/images/vehicles/star-wars-landspeeder.jpg",
+  "/images/vehicles/star-wars-starfighter.jpg",
+  "/images/vehicles/star-wars-snowspeeder.jpeg",
+  "/images/vehicles/star-wars-tie-bomber.jpg",
+  "/images/vehicles/star-wars-at-at.jpg",
+  "/images/vehicles/star-wars-at-st.jpeg",
+  "/images/vehicles/star-wars-storm-iv-twin-pod-cloud-car.jpg",
+  "/images/vehicles/star-wars-sail-barge.jpg",
 ];
 
 const renderVehicles = (data) => {
@@ -52,7 +52,7 @@ const renderVehicles = (data) => {
 
     card.classList.add("card");
     cardImageContainer.classList.add("card__image-square-container");
-    cardImage.classList.add("card__image");
+    cardImage.classList.add("card__image-square");
     cardList.classList.add("card__list");
 
     // Card content

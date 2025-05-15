@@ -1,16 +1,16 @@
 import fetchData from "./fetchData.js";
 
 const planets = [
-  "../src/assets/images/planets/star-wars-tatooine.jpg",
-  "../src/assets/images/planets/star-wars-alderaan.jpg",
-  "../src/assets/images/planets/star-wars-yavin-iv.jpg",
-  "../src/assets/images/planets/star-wars-hoth.jpg",
-  "../src/assets/images/planets/star-wars-dagobah.jpg",
-  "../src/assets/images/planets/star-wars-bespin.jpg",
-  "../src/assets/images/planets/star-wars-endor.jpg",
-  "../src/assets/images/planets/star-wars-naboo.jpg",
-  "../src/assets/images/planets/star-wars-coruscant.jpg",
-  "../src/assets/images/planets/star-wars-kamino.jpg",
+  "/images/planets/star-wars-tatooine.jpg",
+  "/images/planets/star-wars-alderaan.jpg",
+  "/images/planets/star-wars-yavin-iv.jpg",
+  "/images/planets/star-wars-hoth.jpg",
+  "/images/planets/star-wars-dagobah.jpg",
+  "/images/planets/star-wars-bespin.jpg",
+  "/images/planets/star-wars-endor.jpg",
+  "/images/planets/star-wars-naboo.jpg",
+  "/images/planets/star-wars-coruscant.jpg",
+  "/images/planets/star-wars-kamino.jpg",
 ];
 
 const renderPlanets = (data) => {
@@ -53,7 +53,7 @@ const renderPlanets = (data) => {
 
     card.classList.add("card");
     cardImageContainer.classList.add("card__image-square-container");
-    cardImage.classList.add("card__image");
+    cardImage.classList.add("card__image-square");
     cardList.classList.add("card__list");
 
     // Card content

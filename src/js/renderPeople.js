@@ -1,16 +1,16 @@
 import fetchData from "./fetchData.js";
 
 const people = [
-  "../src/assets/images/people/star-wars-luke-skywalker.jpg",
-  "../src/assets/images/people/star-wars-c3po.jpeg",
-  "../src/assets/images/people/star-wars-r2d2.jpg",
-  "../src/assets/images/people/star-wars-darth-vader.jpg",
-  "../src/assets/images/people/star-wars-leia-organa.jpg",
-  "../src/assets/images/people/star-wars-owen-lars.jpg",
-  "../src/assets/images/people/star-wars-beru-whitesun-lars.jpg",
-  "../src/assets/images/people/star-wars-r5d4.jpeg",
-  "../src/assets/images/people/star-wars-biggs-darklighter.jpg",
-  "../src/assets/images/people/star-wars-obi-wan-kenobi.png",
+  "/images/people/star-wars-luke-skywalker.jpg",
+  "/images/people/star-wars-c3po.jpeg",
+  "/images/people/star-wars-r2d2.jpg",
+  "/images/people/star-wars-darth-vader.jpg",
+  "/images/people/star-wars-leia-organa.jpg",
+  "/images/people/star-wars-owen-lars.jpg",
+  "/images/people/star-wars-beru-whitesun-lars.jpg",
+  "/images/people/star-wars-r5d4.jpeg",
+  "/images/people/star-wars-biggs-darklighter.jpg",
+  "/images/people/star-wars-obi-wan-kenobi.png",
 ];
 
 const renderPeople = (data) => {
