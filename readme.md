@@ -32,7 +32,7 @@ To build an app that:
 ## 🌐 Live Demo & Source Code
 
 - 🔗 [GitHub Repository](https://github.com/MartinusAaD/semester_2_assignment_1)
-- 🚀 [Live Site on Netlify]()
+- 🚀 [Live Site on Netlify](https://semester2-assignment1.netlify.app)
 
 ---
 
