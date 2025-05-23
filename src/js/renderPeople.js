@@ -38,7 +38,7 @@ const renderPeople = (data) => {
     return listElement;
   };
 
-  for (let i = 0; i < data.results.length; i++) {
+  data.results.map((data, i) => {
     const card = document.createElement("div");
     const cardImageContainer = document.createElement("div");
     const cardImage = document.createElement("img");
@@ -56,21 +56,12 @@ const renderPeople = (data) => {
     cardList.classList.add("card__list");
 
     // Card content
-    const peopleName = createListElement("Character:", data.results[i].name);
-    const peopleGender = createListElement("Gender:", data.results[i].gender);
-    const peopleHeight = createListElement("Height:", data.results[i].height);
-    const peopleHairColor = createListElement(
-      "Hair Color:",
-      data.results[i].hair_color
-    );
-    const peopleEyeColor = createListElement(
-      "Eye Color:",
-      data.results[i].eye_color
-    );
-    const peopleBirthYear = createListElement(
-      "Birth Year:",
-      data.results[i].birth_year
-    );
+    const peopleName = createListElement("Character:", data.name);
+    const peopleGender = createListElement("Gender:", data.gender);
+    const peopleHeight = createListElement("Height:", data.height);
+    const peopleHairColor = createListElement("Hair Color:", data.hair_color);
+    const peopleEyeColor = createListElement("Eye Color:", data.eye_color);
+    const peopleBirthYear = createListElement("Birth Year:", data.birth_year);
 
     // Appending list elements
     cardList.append(
@@ -81,9 +72,7 @@ const renderPeople = (data) => {
       peopleEyeColor,
       peopleBirthYear
     );
-
-    console.log(cardList);
-  }
+  });
 };
 
 export default renderPeople;

@@ -36,7 +36,7 @@ const renderFilms = (data) => {
     return listElement;
   };
 
-  for (let i = 0; i < data.results.length; i++) {
+  data.results.map((data, i) => {
     const card = document.createElement("div");
     const cardImageContainer = document.createElement("div");
     const cardImage = document.createElement("img");
@@ -54,23 +54,14 @@ const renderFilms = (data) => {
     cardList.classList.add("card__list");
 
     // Card content
-    const filmTitle = createListElement("Film title:", data.results[i].title);
-    const filmEpisode = createListElement(
-      "Film episode:",
-      data.results[i].episode_id
-    );
+    const filmTitle = createListElement("Film title:", data.title);
+    const filmEpisode = createListElement("Film episode:", data.episode_id);
     const filmReleaseDate = createListElement(
       "Release Date:",
-      data.results[i].release_date
+      data.release_date
     );
-    const filmDirector = createListElement(
-      "Film director:",
-      data.results[i].director
-    );
-    const filmProducers = createListElement(
-      "Film producers:",
-      data.results[i].producer
-    );
+    const filmDirector = createListElement("Film director:", data.director);
+    const filmProducers = createListElement("Film producers:", data.producer);
 
     // Appending list elements
     cardList.append(
@@ -80,9 +71,7 @@ const renderFilms = (data) => {
       filmDirector,
       filmProducers
     );
-
-    console.log(cardList);
-  }
+  });
 };
 
 export default renderFilms;

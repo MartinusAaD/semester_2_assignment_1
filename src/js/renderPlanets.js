@@ -39,7 +39,7 @@ const renderPlanets = (data) => {
     return listElement;
   };
 
-  for (let i = 0; i < data.results.length; i++) {
+  data.results.map((data, i) => {
     const card = document.createElement("div");
     const cardImageContainer = document.createElement("div");
     const cardImage = document.createElement("img");
@@ -57,26 +57,17 @@ const renderPlanets = (data) => {
     cardList.classList.add("card__list");
 
     // Card content
-    const planetsName = createListElement("Planet:", data.results[i].name);
+    const planetsName = createListElement("Planet:", data.name);
     const planetsDiameter = createListElement(
       "Diameter:",
-      `${data.results[i].diameter} Kilometers`
+      `${data.diameter} Kilometers`
     );
-    const planetsTerrain = createListElement(
-      "Terrain:",
-      data.results[i].terrain
-    );
-    const planetsGravity = createListElement(
-      "Gravity:",
-      data.results[i].gravity
-    );
-    const planetsPopulation = createListElement(
-      "Population:",
-      data.results[i].population
-    );
+    const planetsTerrain = createListElement("Terrain:", data.terrain);
+    const planetsGravity = createListElement("Gravity:", data.gravity);
+    const planetsPopulation = createListElement("Population:", data.population);
     const planetsOrbitalPeriod = createListElement(
       "Orbital Period:",
-      `${data.results[i].orbital_period}`
+      `${data.orbital_period}`
     );
 
     // Appending list elements
@@ -88,9 +79,7 @@ const renderPlanets = (data) => {
       planetsPopulation,
       planetsOrbitalPeriod
     );
-
-    console.log(cardList);
-  }
+  });
 };
 
 export default renderPlanets;

@@ -38,7 +38,7 @@ const renderVehicles = (data) => {
     return listElement;
   };
 
-  for (let i = 0; i < data.results.length; i++) {
+  data.results.map((data, i) => {
     const card = document.createElement("div");
     const cardImageContainer = document.createElement("div");
     const cardImage = document.createElement("img");
@@ -56,23 +56,23 @@ const renderVehicles = (data) => {
     cardList.classList.add("card__list");
 
     // Card content
-    const vehiclesName = createListElement("Planet:", data.results[i].name);
-    const vehiclesModel = createListElement("Model:", data.results[i].model);
+    const vehiclesName = createListElement("Planet:", data.name);
+    const vehiclesModel = createListElement("Model:", data.model);
     const vehiclesLength = createListElement(
       "Length:",
-      `${data.results[i].length} meters`
+      `${data.length} meters`
     );
     const vehiclesCargoCapacity = createListElement(
       "Cargo Capacity:",
-      data.results[i].cargo_capacity
+      data.cargo_capacity
     );
     const vehiclesManufacturer = createListElement(
       "Manufacturer:",
-      data.results[i].manufacturer
+      data.manufacturer
     );
     const vehiclesPassengers = createListElement(
       "Passengers:",
-      data.results[i].passengers
+      data.passengers
     );
 
     // Appending list elements
@@ -84,9 +84,7 @@ const renderVehicles = (data) => {
       vehiclesCargoCapacity,
       vehiclesPassengers
     );
-
-    console.log(cardList);
-  }
+  });
 };
 
 export default renderVehicles;
